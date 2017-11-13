@@ -15,8 +15,9 @@ class OrcClient(object):
         return self._http_client
 
     def discovery(self, instance, port):
-       request.urlopen("http://10.71.84.90:3000/api/discover/127.0.0.1/3306")
+        request.urlopen("http://10.71.84.77:3000/api/discover/10.71.84.76/3306")
 
-
-
+orc = OrcClient("http://10.71.84.77:3000/api")
+d = orc.discovery("1", "2")
+print d
 
